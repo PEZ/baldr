@@ -1,0 +1,19 @@
+{
+  "name": "baldr",
+  "scripts": {
+    "test": "node out/tests.js",
+    "pretest": "shadow-cljs release test-compile"
+  },
+  "keywords": [
+    "Clojure",
+    "ClojureScript",
+    "shadow-cljs",
+    "Testing"
+  ],
+  "author": "Peter Strömberg https://github.com/PEZ",
+  "license": "MIT",
+  "description": "See README.md",
+  "devDependencies": {
+    "shadow-cljs": "^2.28.20"
+  }
+}

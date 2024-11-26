@@ -1,0 +1,9 @@
+{:deps {:aliases [:cljs]}
+ :builds
+ {:test {:target    :node-test
+         :output-to "out/tests.js"
+         :ns-regexp "-test$"
+         :autorun   true}
+  :test-compile {:target    :node-test
+                 :output-to "out/tests.js"
+                 :ns-regexp "-test$"}}}
