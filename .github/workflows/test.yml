@@ -29,6 +29,7 @@ jobs:
         uses: DeLaGuardo/setup-clojure@12.5
         with:
           cli: latest
+          bb: latest
 
       - name: Cache clojure/java dependencies
         uses: actions/cache@v4
@@ -52,12 +53,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
 
-      - name: Test with ClojureScript
+      - name: Test with nbb
         run: |
           set -x
-          npm test
+          npx nbb -cp src:test -e "(require 'clojure.test 'pez.baldr-test) (cljs.test/run-tests 'pez.baldr-test)"
+
+      - name: Test with Babashka
+        run: |
+          set -x
+          bb -cp src:test -e "(require 'clojure.test 'pez.baldr-test) (clojure.test/run-tests 'pez.baldr-test)"
 
       - name: Test with Clojure
         run: |
           set -x
           clojure -M -e "(require 'clojure.test 'pez.baldr-test) (clojure.test/run-tests 'pez.baldr-test)"
+
+      - name: Test with ClojureScript
+        run: |
+          set -x
+          npm test
