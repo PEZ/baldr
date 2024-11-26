@@ -11,11 +11,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -42,27 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-clojure-
 
-      - name: Install node dependencies
-        run: npm install
-
-      - name: Cache npm
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
-
-      - name: Test with nbb
-        run: |
-          set -x
-          npx nbb -cp src:test -e "(require 'clojure.test 'pez.baldr-test) (cljs.test/run-tests 'pez.baldr-test)"
-
-      - name: Test with Babashka
-        run: |
-          set -x
-          bb -cp src:test -e "(require 'clojure.test 'pez.baldr-test) (clojure.test/run-tests 'pez.baldr-test)"
-
       - name: Test with Clojure
         run: |
           set -x
@@ -71,4 +45,14 @@ jobs:
       - name: Test with ClojureScript
         run: |
           set -x
-          npm test
+          clojure -M:cljs -m cljs.main -re node -i test/pez/baldr_test.cljc  -e "(cljs.test/run-tests 'pez.baldr-test)"
+
+      - name: Test with Babashka
+        run: |
+          set -x
+          bb -cp src:test -e "(require 'clojure.test 'pez.baldr-test) (clojure.test/run-tests 'pez.baldr-test)"
+
+      - name: Test with nbb
+        run: |
+          set -x
+          npx nbb -cp src:test -e "(require 'clojure.test 'pez.baldr-test) (cljs.test/run-tests 'pez.baldr-test)"

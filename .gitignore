@@ -2,9 +2,11 @@
 /checkouts
 /src/gen
 .cpcache/
+.cljs_node_repl
 /build
 
 node_modules
+/package-lock.json
 
 pom.xml
 pom.xml.asc
