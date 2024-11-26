@@ -42,7 +42,7 @@
           "a seen context is ignored")
       (is (= ["    |b * b| |t message t|"]
              (sut-get-report {:message "message"} [] ["context 1" "context 2"] config))
-          "more than on seen contexts are also ignored"))
+          "more than one seen contexts? also ignored!"))
 
     (testing "With context"
       (testing "Matching seen context"

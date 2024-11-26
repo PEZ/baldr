@@ -12,7 +12,7 @@
   ],
   "author": "Peter Strömberg https://github.com/PEZ",
   "license": "MIT",
-  "description": "See README.md",
+  "description": "This is only needed for using shadow-cljs when hacking on Baldr.",
   "devDependencies": {
     "shadow-cljs": "^2.28.20"
   }
