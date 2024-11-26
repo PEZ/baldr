@@ -56,6 +56,8 @@ What we do in the [Replicant TodoMVC](https://github.com/anteoas/replicant-todom
 
 - [Baldr](https://github.com/PEZ/baldr) 😄
 - [The Replicant TodoMVC](https://github.com/anteoas/replicant-todomvc)
+- [VS-ET: The VS Code Extension Template](https://github.com/PEZ/vscode-extension-template)
+- Your project here?
 
 ## Hacking on Baldr
 
