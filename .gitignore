@@ -8,8 +8,7 @@
 node_modules
 /package-lock.json
 
-pom.xml
-pom.xml.asc
+*.pom.asc
 *.iml
 *.jar
 *.log

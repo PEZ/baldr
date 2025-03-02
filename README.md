@@ -2,6 +2,8 @@
 
 You are running all those tests, and they all pass, but you lack the jolt of happiness you get from seeing green checkmarks from each passing test.
 
+[![bb compatible](https://raw.githubusercontent.com/babashka/babashka/master/logo/badge.svg)](https://babashka.org)
+
 [clojure.test](https://clojuredocs.org/clojure.test) only brings you the bad news by default. However, `clojure.test/report` is extensible, and Baldr extends it to add positive reporting, [Mocha](https://mochajs.org/) inspired.
 
 ![Baldr's tests reported with a smile](baldr-tests.png)
@@ -19,11 +21,8 @@ Baldr works for [Clojure](https://clojure.org/) and [ClojureScript](https://cloj
 Add it to your project dependencies:
 
 ```clojure
-  pez/baldr {:git/url "https://github.com/PEZ/baldr"
-             :sha "83ba18279b22ff5680fe8fd9be02933d6d05b5d3"}
+io.github.pez/baldr {:mvn/version "1.0.9"}
 ```
-
-There's no Clojars release yet. I'll add one if there's interest.
 
 Baldr is only a few multimethods, implementing dispatchers for `clojure.test/report`. As long as `pez.baldr` is required when your tests are run, your tests will be reported with the smile of Baldr.
 
