@@ -114,4 +114,4 @@ MIT [LICENSE](LICENSE.md)
 
 ## Happy and positive testing! ❤️
 
-Please consider supporting my open source work. My family is much happier sharing me with the Clojure comminity when they see that people and companies appreciate me spending time to serve there: [My GitHub Sponsors profile](https://github.com/sponsors/PEZ)
+Please consider supporting my open source work. My family is much happier sharing me with the Clojure community when they see that people and companies appreciate me spending time to serve there: [My GitHub Sponsors profile](https://github.com/sponsors/PEZ)
