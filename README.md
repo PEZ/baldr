@@ -2,7 +2,7 @@
 
 You are running all those tests, and they all pass, but you lack the jolt of happiness you get from seeing green checkmarks from each passing test.
 
-[![bb compatible](https://raw.githubusercontent.com/babashka/babashka/master/logo/badge.svg)](https://babashka.org)
+[![bb compatible](https://raw.githubusercontent.com/babashka/babashka/master/logo/badge.svg)](https://book.babashka.org#badges)
 
 [clojure.test](https://clojuredocs.org/clojure.test) only brings you the bad news by default. However, `clojure.test/report` is extensible, and Baldr extends it to add positive reporting, [Mocha](https://mochajs.org/) inspired.
 
